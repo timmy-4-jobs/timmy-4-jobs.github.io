@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="フロントエンドエンジニア歴10年。UX改善・アクセシビリティ対応を強みとしています" />
+    <title>Timmy | Frontend Engineer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ========== NAV ========== -->
+    <nav class="nav" id="nav" aria-label="メインナビゲーション">
+        <div class="nav__inner">
+            <a href="#hero" class="nav__logo">Timmy<span class="nav__logo-dot">.</span></a>
+            <button class="nav__hamburger" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav__list" id="navList" role="list">
+                <li><a href="#about" class="nav__link">About</a></li>
+                <li><a href="#intro" class="nav__link">Why</a></li>
+                <li><a href="#skills" class="nav__link">Skills</a></li>
+                <li><a href="#works" class="nav__link">Works</a></li>
+                <li><a href="#looking-for" class="nav__link">Looking For</a></li>
+                <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- ========== HERO ========== -->
+        <section class="hero" id="hero">
+            <div class="hero__bg-grid" aria-hidden="true"></div>
+            <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+            <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+            <div class="hero__inner">
+                <div class="hero__content">
+                    <p class="hero__eyebrow fade-in-up" data-delay="0">プロダクト思考×ユーザー目線の価値提供</p>
+                    <h1 class="hero__headline fade-in-up" data-delay="1">
+                        AIを道具として活用しながら、<br />
+                        <span class="hero__headline-accent">課題整理からUI改善まで</span><br />
+                        担うフロントエンドエンジニア
+                    </h1>
+                    <div class="hero__meta fade-in-up" data-delay="2">
+                        <span class="hero__name">Timmy</span>
+                        <span class="hero__sep" aria-hidden="true">|</span>
+                        <span class="hero__role">Frontend Engineer</span>
+                        <span class="hero__sep" aria-hidden="true">|</span>
+                        <span class="hero__exp"><b class="hero__count" data-count="10"
+                                aria-label="10">0</b>年の実務経験</span>
+                    </div>
+                    <div class="hero__cta fade-in-up" data-delay="3">
+                        <a href="#works" class="btn btn--primary">実績を見る</a>
+                        <a href="#contact" class="btn btn--ghost">お問い合わせ</a>
+                    </div>
+                </div>
+
+                <div class="hero__visual fade-in-up" data-delay="2" aria-hidden="true">
+                    <div class="hero__card-stack">
+                        <!-- Card 1: Vue -->
+                        <div class="hcard hcard--vue">
+                            <div class="hcard__inner">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="60"
+                                    height="60">
+                                    <path d="M2 3h5.5L12 11.5 16.5 3H22L12 21 2 3z" fill="#41B883" />
+                                    <path d="M7.5 3h4.5L12 5.5 16.5 3h-4.5L12 5.5 7.5 3z" fill="#34495E" />
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Card 2: React -->
+                        <div class="hcard hcard--react">
+                            <div class="hcard__inner">
+                                <svg viewBox="-11.5 -10.232 23 20.463" xmlns="http://www.w3.org/2000/svg" width="64"
+                                    height="64">
+                                    <circle r="2.05" fill="#61dafb" />
+                                    <g stroke="#61dafb" stroke-width="1" fill="none">
+                                        <ellipse rx="11" ry="4.2" />
+                                        <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+                                        <ellipse rx="11" ry="4.2" transform="rotate(120)" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Card 3: Claude -->
+                        <div class="hcard hcard--claude">
+                            <div class="hcard__inner">
+                                <svg width="60" height="60" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.709 15.955l4.72-2.647.08-.23-.08-.128H9.2l-.79-.048-2.698-.073-2.339-.097-2.266-.122-.571-.121L0 11.784l.055-.352.48-.321.686.06 1.52.103 2.278.158 1.652.097 2.449.255h.389l.055-.157-.134-.098-.103-.097-2.358-1.596-2.552-1.688-1.336-.972-.724-.491-.364-.462-.158-1.008.656-.722.881.06.225.061.893.686 1.908 1.476 2.491 1.833.365.304.145-.103.019-.073-.164-.274-1.355-2.446-1.446-2.49-.644-1.032-.17-.619a2.97 2.97 0 01-.104-.729L6.283.134 6.696 0l.996.134.42.364.62 1.414 1.002 2.229 1.555 3.03.456.898.243.832.091.255h.158V9.01l.128-1.706.237-2.095.23-2.695.08-.76.376-.91.747-.492.584.28.48.685-.067.444-.286 1.851-.559 2.903-.364 1.942h.212l.243-.242.985-1.306 1.652-2.064.73-.82.85-.904.547-.431h1.033l.76 1.129-.34 1.166-1.064 1.347-.881 1.142-1.264 1.7-.79 1.36.073.11.188-.02 2.856-.606 1.543-.28 1.841-.315.833.388.091.395-.328.807-1.969.486-2.309.462-3.439.813-.042.03.049.061 1.549.146.662.036h1.622l3.02.225.79.522.474.638-.079.485-1.215.62-1.64-.389-3.829-.91-1.312-.329h-.182v.11l1.093 1.068 2.006 1.81 2.509 2.33.127.578-.322.455-.34-.049-2.205-1.657-.851-.747-1.926-1.62h-.128v.17l.444.649 2.345 3.521.122 1.08-.17.353-.608.213-.668-.122-1.374-1.925-1.415-2.167-1.143-1.943-.14.08-.674 7.254-.316.37-.729.28-.607-.461-.322-.747.322-1.476.389-1.924.315-1.53.286-1.9.17-.632-.012-.042-.14.018-1.434 1.967-2.18 2.945-1.726 1.845-.414.164-.717-.37.067-.662.401-.589 2.388-3.036 1.44-1.882.93-1.086-.006-.158h-.055L4.132 18.56l-1.13.146-.487-.456.061-.746.231-.243 1.908-1.312-.006.006z"
+                                        fill="#D97757" fill-rule="nonzero"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#about" class="hero__scroll" aria-label="About セクションへスクロール">
+                <span class="hero__scroll-line"></span>
+                <span class="hero__scroll-text">Scroll</span>
+            </a>
+        </section>
+
+        <!-- ========== ABOUT ========== -->
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="section-label fade-in-up">Profile</div>
+                <h2 class="section-title fade-in-up">自己紹介</h2>
+                <div class="about__grid">
+                    <div class="about__profile fade-in-up">
+                        <div class="profile-card">
+                            <div class="profile-card__avatar" aria-hidden="true">
+                                <img src="images/icon.png" alt="Profile Icon" class="avatar-img" />
+                            </div>
+                            <dl class="profile-card__info">
+                                <div class="profile-card__row">
+                                    <dt>名前</dt>
+                                    <dd>Timmy</dd>
+                                </div>
+                                <div class="profile-card__row">
+                                    <dt>肩書き</dt>
+                                    <dd>フロントエンドエンジニア<br>システムエンジニア<br>Webディレクター</dd>
+                                </div>
+                                <div class="profile-card__row">
+                                    <dt>尊敬するエンジニア</dt>
+                                    <dd><a href="https://yui540.com/" target="_blank">yui540</a><br><a
+                                            href="https://ics.media/entry/staff/ikeda/" target="_blank">池田 泰延</a></dd>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="about__strength fade-in-up" data-delay="1">
+                        <h3 class="about__strength-title">強み</h3>
+                        <p class="about__strength-text">
+                            単にPSDやFigmaのデザインデータを画面上に起こすだけではない、<br />
+                            ユーザー目線での双方向的な画面設計・実装が得意です。
+                        </p>
+                        <p class="about__strength-text">
+                            データビジュアライゼーションやアクセシビリティ対応など、<br />
+                            目に見えない価値を画面上で表現することに長けています。
+                        </p>
+                        <div class="about__tags">
+                            <span class="tag">UX</span>
+                            <span class="tag">Accessibility</span>
+                            <span class="tag">Data Visualization</span>
+                            <span class="tag">Architecture</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== WHY & DIFF ========== -->
+        <section class="section intro" id="intro">
+            <div class="container">
+                <div class="section-label fade-in-up">Why &amp; Diff</div>
+                <h2 class="section-title fade-in-up">エンジニアとしての<span class="text-grad">軸</span></h2>
+
+                <div class="intro__cards">
+                    <article class="intro-card fade-in-up">
+                        <div class="intro-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                width="28" height="28">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="intro-card__title">なぜフロントエンドを10年続けてきたか</h3>
+                        <p class="intro-card__text">
+                            元々はWebコーダーでマークアップを担当していたが、スキルが上がるにつれて
+                            <em>"ただ画面を作る"のではなく</em>、デザイン案のイメージを超えた操作性・表現といった
+                            <em>"体験を作る"</em>ことに価値を感じたため続けてきた。
+                        </p>
+                    </article>
+
+                    <article class="intro-card fade-in-up" data-delay="1">
+                        <div class="intro-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                width="28" height="28">
+                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="intro-card__title">AIと違って何ができるか</h3>
+                        <ul class="intro-card__list">
+                            <li>共同開発者の書き手の"クセ"に合わせたコーディング</li>
+                            <li><span>場当たり的でない、<em>"ユーザー体験を改善させる意図"</em>に沿ったUI改善</span></li>
+                            <li>デザインとのトンマナ統一やCSS/SVGでのトリッキーな表現</li>
+                            <li>システム全体のアーキテクチャ思想に沿ったページ・コンポーネントの作成</li>
+                        </ul>
+                        <p class="intro-card__footer">
+                            上記のような複合的な思考は、10年の実務経験を通じて培った強みです。
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SKILLS ========== -->
+        <section class="section skills" id="skills">
+            <div class="container">
+                <div class="section-label fade-in-up">Skills</div>
+                <h2 class="section-title fade-in-up">できること</h2>
+
+                <div class="skills__grid">
+
+                    <article class="skill-card fade-in-up" data-delay="0">
+                        <div class="skill-card__num" aria-hidden="true">01</div>
+                        <h3 class="skill-card__title">フロント設計・UX改善</h3>
+                        <p class="skill-card__text">
+                            要件整理〜画面設計まで一気通貫で対応。Webディレクションやデザイン制作・動画編集なども担当経験あり。
+                        </p>
+                    </article>
+
+                    <article class="skill-card fade-in-up" data-delay="1">
+                        <div class="skill-card__num" aria-hidden="true">02</div>
+                        <h3 class="skill-card__title">アーキテクチャ設計</h3>
+                        <p class="skill-card__text">
+                            Vue・React・Angularなど一般的なJSフレームワークでの開発経験あり。使用フレームワークや技術的な"べき論"に拘りはなく、
+                            <em>「まず動くものを作って、次に満足させるものを作る」</em>をモットーとしています。
+                        </p>
+                    </article>
+
+                    <article class="skill-card fade-in-up" data-delay="2">
+                        <div class="skill-card__num" aria-hidden="true">03</div>
+                        <h3 class="skill-card__title">パフォーマンス・アクセシビリティ</h3>
+                        <p class="skill-card__text">
+                            色盲者・聾唖者向けの改修対応やページスピード改善対応など。直感的なUI改修やデータビジュアライゼーションも得意です。
+                        </p>
+                    </article>
+
+                    <article class="skill-card fade-in-up" data-delay="3">
+                        <div class="skill-card__num" aria-hidden="true">04</div>
+                        <h3 class="skill-card__title">その他</h3>
+                        <p class="skill-card__text">
+                            Cordova+Ionic構成でのスマホアプリ開発経験あり。バックエンドはメイン担当ではないものの、
+                            Ruby on Rails・Pythonでの改修経験があります。
+                        </p>
+                    </article>
+
+                </div>
+
+                <!-- Tech Stack -->
+                <div class="tech-stack fade-in-up">
+                    <h3 class="tech-stack__title">基本となる技術スタック</h3>
+                    <div class="tech-stack__list">
+                        <span class="tech-tag tech-tag--main">JavaScript</span>
+                        <span class="tech-tag tech-tag--main">TypeScript</span>
+                        <span class="tech-tag tech-tag--main">Vue / Nuxt</span>
+                        <span class="tech-tag tech-tag--main">React / Next</span>
+                        <span class="tech-tag tech-tag--main">Angular</span>
+                        <span class="tech-tag tech-tag--main">HTML / CSS</span>
+                        <span class="tech-tag tech-tag--main">SVG</span>
+                        <span class="tech-tag tech-tag--main">CMS</span>
+                        <span class="tech-tag tech-tag--main">ECサイト開発</span>
+                        <span class="tech-tag tech-tag--main">Git / CI/CD</span>
+                    </div>
+                    <h3 class="tech-stack__title tech-stack__title--sub">その他実務経験</h3>
+                    <div class="tech-stack__list">
+                        <span class="tech-tag">Canvas API</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Ruby on Rails</span>
+                        <span class="tech-tag">スマホアプリ開発 (Cordova+Ionic)</span>
+                        <span class="tech-tag">Alexaスキル開発</span>
+                        <span class="tech-tag">Webデザイン</span>
+                        <span class="tech-tag">動画編集</span>
+                        <span class="tech-tag">Google Analytics分析</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== WORKS ========== -->
+        <section class="section works" id="works">
+            <div class="container">
+                <div class="section-label fade-in-up">Works</div>
+                <h2 class="section-title fade-in-up">実績・事例</h2>
+
+                <div class="works__list">
+
+                    <!-- Work 1 -->
+                    <article class="work-card fade-in-up" id="work1">
+                        <div class="work-card__cover work-card__cover--1"></div>
+                        <div class="work-card__header">
+                            <div class="work-card__meta">
+                                <span class="work-card__num">01</span>
+                                <div>
+                                    <h3 class="work-card__title">エンジニア派遣会社の<br />予実管理システム開発</h3>
+                                    <div class="work-card__tags">
+                                        <span class="tag tag--sm">Nuxt</span>
+                                        <span class="tag tag--sm">Vue</span>
+                                        <span class="tag tag--sm">Vuetify</span>
+                                        <span class="tag tag--sm">TypeScript</span>
+                                        <span class="tag tag--sm">API連携</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="work-card__toggle" aria-expanded="false" aria-controls="work1-detail">
+                                <span class="work-card__toggle-icon" aria-hidden="true"></span>
+                                <span class="sr-only">詳細を開く</span>
+                            </button>
+                        </div>
+
+                        <div class="work-card__detail" id="work1-detail" hidden>
+                            <div class="work-detail__layout">
+                                <dl class="work-detail">
+                                    <div class="work-detail__block">
+                                        <dt class="work-detail__label">
+                                            <span class="work-detail__icon" aria-hidden="true">⚠</span>課題
+                                        </dt>
+                                        <dd>
+                                            <ul class="work-detail__list">
+                                                <li>営業成績の把握が難しい</li>
+                                                <li>エンジニアの常駐状態の把握が難しい</li>
+                                                <li>自社エンジニア・フリーランサー・BP企業紹介など、契約形態パターンが複雑</li>
+                                            </ul>
+                                        </dd>
+                                    </div>
+                                    <div class="work-detail__block">
+                                        <dt class="work-detail__label">
+                                            <span class="work-detail__icon" aria-hidden="true">⚙</span>取り組み
+                                        </dt>
+                                        <dd>
+                                            <ul class="work-detail__list">
+                                                <li>要件定義と課題の整理、技術選定</li>
+                                                <li>外部サービスの仕様確認とAPI連携</li>
+                                                <li>Nuxt+Vue+Vuetify+TSで構築。アーキテクチャとコンポーネント設計をチームに共有</li>
+                                                <li>デザイン未完・APIバックエンド並走という状況でDB設計とUIの双方に意識を回しながら開発</li>
+                                            </ul>
+                                        </dd>
+                                    </div>
+                                </dl>
+                                <div class="work-detail__visual">
+                                    <img src="images/work1.png" alt="予実管理システム スクリーンショット" class="work-detail__img"
+                                        loading="lazy" />
+                                </div>
+                            </div>
+                            <dl class="work-detail work-detail--full">
+                                <div class="work-detail__block work-detail__block--result">
+                                    <dt class="work-detail__label">
+                                        <span class="work-detail__icon" aria-hidden="true">✓</span>結果
+                                    </dt>
+                                    <dd>複雑な契約形態を整理し、Phase 1 としてのリリースを達成した。</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <!-- Work 2 -->
+                    <article class="work-card fade-in-up" data-delay="1" id="work2">
+                        <div class="work-card__cover work-card__cover--2"></div>
+                        <div class="work-card__header">
+                            <div class="work-card__meta">
+                                <span class="work-card__num">02</span>
+                                <div>
+                                    <h3 class="work-card__title">ブロックチェーン技術を利用した<br />クラウドファンディングアプリのリニューアル</h3>
+                                    <div class="work-card__tags">
+                                        <span class="tag tag--sm">React</span>
+                                        <span class="tag tag--sm">API連携</span>
+                                        <span class="tag tag--sm">CSS設計</span>
+                                        <span class="tag tag--sm">コンポーネント整理</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="work-card__toggle" aria-expanded="false" aria-controls="work2-detail">
+                                <span class="work-card__toggle-icon" aria-hidden="true"></span>
+                                <span class="sr-only">詳細を開く</span>
+                            </button>
+                        </div>
+
+                        <div class="work-card__detail" id="work2-detail" hidden>
+                            <div class="work-detail__layout">
+                                <dl class="work-detail">
+                                    <div class="work-detail__block">
+                                        <dt class="work-detail__label">
+                                            <span class="work-detail__icon" aria-hidden="true">⚠</span>課題
+                                        </dt>
+                                        <dd>
+                                            <ul class="work-detail__list">
+                                                <li>フロントエンド担当者が少なく経験も浅い</li>
+                                                <li>コンポーネントの記述に一貫性がなく、デザイン崩れがしばしば生じる</li>
+                                                <li>UIが煩雑</li>
+                                            </ul>
+                                        </dd>
+                                    </div>
+                                    <div class="work-detail__block">
+                                        <dt class="work-detail__label">
+                                            <span class="work-detail__icon" aria-hidden="true">⚙</span>取り組み
+                                        </dt>
+                                        <dd>
+                                            <ul class="work-detail__list">
+                                                <li>グローバルCSSとインラインスタイルが混在する状態を分析</li>
+                                                <li>旧来のWeb制作的なCSSモジュール設計を採用し整理</li>
+                                                <li>基本コンポーネントを再利用可能な状態に整備しデザインブレを防止</li>
+                                            </ul>
+                                        </dd>
+                                    </div>
+                                </dl>
+                                <div class="work-detail__visual">
+                                    <img src="images/work2.png" alt="クラウドファンディングアプリ スクリーンショット" class="work-detail__img"
+                                        loading="lazy" />
+                                </div>
+                            </div>
+                            <dl class="work-detail work-detail--full">
+                                <div class="work-detail__block work-detail__block--result">
+                                    <dt class="work-detail__label">
+                                        <span class="work-detail__icon" aria-hidden="true">✓</span>結果
+                                    </dt>
+                                    <dd>表示崩れの報告が格段に減り、QA工数削減に貢献。担当者によるクオリティのバラつきも軽減した。</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <!-- Work 3 -->
+                    <article class="work-card fade-in-up" data-delay="2" id="work3">
+                        <div class="work-card__cover work-card__cover--3"></div>
+                        <div class="work-card__header">
+                            <div class="work-card__meta">
+                                <span class="work-card__num">03</span>
+                                <div>
+                                    <h3 class="work-card__title">大手航空会社の<br />ヘッドレスCMSサイト改修</h3>
+                                    <div class="work-card__tags">
+                                        <span class="tag tag--sm">Adobe Experience Manager</span>
+                                        <span class="tag tag--sm">アクセシビリティ</span>
+                                        <span class="tag tag--sm">パフォーマンス改善</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="work-card__toggle" aria-expanded="false" aria-controls="work3-detail">
+                                <span class="work-card__toggle-icon" aria-hidden="true"></span>
+                                <span class="sr-only">詳細を開く</span>
+                            </button>
+                        </div>
+
+                        <div class="work-card__detail" id="work3-detail" hidden>
+                            <div class="work-detail__layout">
+                                <dl class="work-detail">
+                                    <div class="work-detail__block">
+                                        <dt class="work-detail__label">
+                                            <span class="work-detail__icon" aria-hidden="true">⚠</span>課題
+                                        </dt>
+                                        <dd>
+                                            <ul class="work-detail__list">
+                                                <li>サイト設計がセマンティックなものになっていない</li>
+                                                <li>アクセシビリティ対応（読み上げ対応）がされていない</li>
+                                                <li>UIが煩雑</li>
+                                            </ul>
+                                        </dd>
+                                    </div>
+                                    <div class="work-detail__block">
+                                        <dt class="work-detail__label">
+                                            <span class="work-detail__icon" aria-hidden="true">⚙</span>取り組み
+                                        </dt>
+                                        <dd>
+                                            <ul class="work-detail__list">
+                                                <li>読み上げ対応・色盲者向け配色・ページスピードの調査を実施</li>
+                                                <li>Adobe Experience Manager の仕様把握から着手</li>
+                                                <li>テスト環境で確認後に本番公開するプロセスで進行</li>
+                                            </ul>
+                                        </dd>
+                                    </div>
+                                </dl>
+                                <div class="work-detail__visual">
+                                    <img src="images/work3.png" alt="大手航空会社サイト スクリーンショット" class="work-detail__img"
+                                        loading="lazy" />
+                                </div>
+                            </div>
+                            <dl class="work-detail work-detail--full">
+                                <div class="work-detail__block work-detail__block--result">
+                                    <dt class="work-detail__label">
+                                        <span class="work-detail__icon" aria-hidden="true">✓</span>結果
+                                    </dt>
+                                    <dd>これまで不便に感じていた層に対するユーザビリティ向上に貢献。画像圧縮等の提案によりページ表示速度も向上した。</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== LOOKING FOR ========== -->
+        <section class="section looking-for" id="looking-for">
+            <div class="container">
+                <div class="section-label fade-in-up">Looking For</div>
+                <h2 class="section-title fade-in-up">求める環境</h2>
+                <div class="looking-for__grid">
+                    <article class="looking-card fade-in-up">
+                        <div class="looking-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                width="32" height="32">
+                                <path d="M20 4C11.2 4 4 11.2 4 20s7.2 16 16 16 16-7.2 16-16S28.8 4 20 4z"
+                                    stroke="currentColor" stroke-width="1.5" />
+                                <path d="M13 20l5 5 9-10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="looking-card__title">プロダクト改善の文化</h3>
+                        <p class="looking-card__text">
+                            「作って終わり」「納品できればそれでよい」というような価値観でなく、
+                            ユーザーのフィードバックを受けてプロダクトを改善していくような土壌を求めています。
+                        </p>
+                    </article>
+                    <article class="looking-card fade-in-up" data-delay="1">
+                        <div class="looking-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                width="32" height="32">
+                                <rect x="5" y="8" width="30" height="22" rx="3" stroke="currentColor"
+                                    stroke-width="1.5" />
+                                <path d="M13 32h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                <path d="M15 15h10M15 20h7" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <h3 class="looking-card__title">フルリモート環境</h3>
+                        <p class="looking-card__text">
+                            集中できる環境でパフォーマンスを最大化できる、フルリモート環境を希望しています。
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CONTACT ========== -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <div class="section-label fade-in-up">Contact</div>
+                <h2 class="section-title fade-in-up">お問い合わせ</h2>
+
+                <div class="contact__layout">
+                    <!-- Left: info -->
+                    <div class="contact__info fade-in-up">
+                        <p class="contact__sub">お気軽にご連絡ください。</p>
+                        <div class="contact__items">
+                            <a href="mailto:timmy4work.4@gmail.com" class="contact-item">
+                                <span class="contact-item__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20"
+                                        height="20">
+                                        <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor"
+                                            stroke-width="1.5" />
+                                        <path d="M2 7l10 7 10-7" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </span>
+                                <span class="contact-item__label">timmy4work.4@gmail.com</span>
+                            </a>
+                            <div class="contact-item">
+                                <span class="contact-item__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20"
+                                        height="20">
+                                        <path
+                                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                                            stroke="currentColor" stroke-width="1.5" />
+                                        <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5" />
+                                    </svg>
+                                </span>
+                                <span class="contact-item__label">居住地：東武東上線「みずほ台駅」から徒歩5分</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Google Maps -->
+                    <div class="contact__map fade-in-up" data-delay="1">
+                        <iframe title="みずほ台駅周辺マップ" src="https://maps.google.com/maps?q=みずほ台駅&output=embed&hl=ja&z=15"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copy">&copy; 2025 Timmy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
