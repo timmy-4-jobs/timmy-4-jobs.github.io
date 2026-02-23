@@ -1,3 +1,5 @@
+Github Pagesで公開している<a href="https://timmy-4-jobs.github.io/">ポートフォリオ</a>です。
+
 # 所要時間
 計6時間30分程度で作りました。
 
